@@ -28,9 +28,9 @@ import ASCII from 'react-rainbow-ascii'
 
 function YourComponent() {
   return (
-    <>
+    <div>
       <ASCII text='ASCII + Rainbows!' />
-    </>
+    </div>
   )
 }
 ```

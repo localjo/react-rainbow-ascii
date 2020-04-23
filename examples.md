@@ -11,10 +11,10 @@ import ASCII from 'react-rainbow-ascii'
 function YourComponent() {
   const [text, setText] = useState('Magic!')
   return (
-    <>
+    <div>
       <ASCII text={text} />
       <input type="text" value={text} onChange={e=>setText(e.target.value)}>
-    </>
+    </div>
   )
 }
 ```
@@ -33,9 +33,9 @@ import FireFont from 'figlet/importable-fonts/Fire Font-k'
 
 function YourComponent() {
   return (
-    <>
+    <div>
       <ASCII text='On Fire!' font={FireFont} />
-    </>
+    </div>
   )
 }
 ```

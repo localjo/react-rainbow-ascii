@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+import ASCII from '.'
 
-describe('ExampleComponent', () => {
+describe('ASCII', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(ASCII).toBeTruthy()
   })
 })

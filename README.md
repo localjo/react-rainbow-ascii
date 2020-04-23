@@ -37,7 +37,7 @@ function YourComponent() {
 
 Result:
 
-![Screenshot](./images/screenshot.png)
+![Screenshot](./images/example.png)
 
 ### Options
 

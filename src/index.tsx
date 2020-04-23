@@ -9,25 +9,18 @@ import React, {
 import figlet from 'figlet'
 // @ts-ignore
 import slant from 'figlet/importable-fonts/Slant.js'
-// @ts-ignore
-import smallSlant from 'figlet/importable-fonts/Small Slant.js'
-
-// @ts-ignore
-figlet.parseFont('Small Slant', smallSlant)
-// @ts-ignore
-figlet.parseFont('Slant', slant)
 
 interface ASCIIProps {
   text?: string
   rainbow?: boolean
-  large?: boolean
   fallback?: string
+  font?: figlet.Fonts
 }
 
 const ASCII: FC<ASCIIProps> = ({
   text = 'Hello!',
   rainbow = true,
-  large = false,
+  font = slant,
   fallback = 'pre'
 }) => {
   const [ascii, setAscii] = useState<string>(text)
@@ -46,7 +39,9 @@ const ASCII: FC<ASCIIProps> = ({
   const fontSize = targetFontSize < baseFontSize ? targetFontSize : baseFontSize
 
   useLayoutEffect(() => {
-    figlet.text(text, { font: large ? 'Slant' : 'Small Slant' }, (_err, data) =>
+    // @ts-ignore
+    figlet.parseFont('Slant', font)
+    figlet.text(text, { font: 'Slant' }, (_err, data) =>
       setAscii(data as string)
     )
     const getParentWidth = () => {

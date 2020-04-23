@@ -15,13 +15,15 @@ interface ASCIIProps {
   rainbow?: boolean
   fallback?: string
   font?: figlet.Fonts
+  id?: string
 }
 
 const ASCII: FC<ASCIIProps> = ({
   text = 'Hello!',
   rainbow = true,
   font = slant,
-  fallback = 'pre'
+  fallback = 'pre',
+  id
 }) => {
   const [ascii, setAscii] = useState<string>(text)
   const [width, setWidth] = useState<number>(0)
@@ -93,16 +95,12 @@ const ASCII: FC<ASCIIProps> = ({
     position: 'absolute',
     visibility: 'hidden'
   }
+  const uniqueClass = `responsive-ascii${id ? `-${id}` : ''}`
   return (
-    <div
-      ref={preWrap}
-      className='responsive-ascii'
-      title={text}
-      aria-label={text}
-    >
+    <div ref={preWrap} className={uniqueClass} title={text} aria-label={text}>
       {hasMounted ? (
         <Fragment>
-          <style>{`.responsive-ascii {width: 100%;} .responsive-ascii pre {margin: 0; padding: 0; font-size: ${fontSize}px;}`}</style>
+          <style>{`.${uniqueClass} {width: 100%;} .${uniqueClass} pre {margin: 0; padding: 0; font-size: ${fontSize}px;}`}</style>
           {rainbow ? <Rainbow /> : <pre>{ascii}</pre>}
         </Fragment>
       ) : (

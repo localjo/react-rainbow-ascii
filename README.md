@@ -4,7 +4,7 @@
 
 ![Screenshot](./images/screenshot.png)
 
-[![NPM](https://img.shields.io/npm/v/rainbow-ascii.svg)](https://www.npmjs.com/package/rainbow-ascii)
+[![NPM](https://img.shields.io/npm/v/react-rainbow-ascii.svg)](https://www.npmjs.com/package/react-rainbow-ascii)
 
 ## Install
 

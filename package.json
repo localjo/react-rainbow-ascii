@@ -1,6 +1,6 @@
 {
   "name": "react-rainbow-ascii",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A React component for generating responsive rainbow ASCII art from text",
   "author": "Jo Sprague <josiah.sprague@gmail.com>",
   "license": "MIT",

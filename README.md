@@ -3,6 +3,7 @@
 > A React component for generating responsive rainbow ASCII art from text
 
 ![Screenshot](./images/screenshot.png)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Flocaljo%2Freact-rainbow-ascii.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Flocaljo%2Freact-rainbow-ascii?ref=badge_shield)
 
 [![NPM](https://img.shields.io/npm/v/react-rainbow-ascii.svg)](https://www.npmjs.com/package/react-rainbow-ascii)
 
@@ -89,3 +90,7 @@ Or:
 ```bash
 cd react-rainbow && yarn test:watch
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Flocaljo%2Freact-rainbow-ascii.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Flocaljo%2Freact-rainbow-ascii?ref=badge_large)
